@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+  <defs>
+    <linearGradient id="g23" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#g23)"/>
+  <g opacity="0.15">
+    <circle cx="144.0" cy="120.0" r="90" fill="#ffffff"/>
+    <circle cx="816.0" cy="510.0" r="120" fill="#ffffff"/>
+  </g>
+  <text x="32" y="568" font-family="Space Grotesk, sans-serif" font-size="22" fill="#ffffff" opacity="0.9">DevNotes — Screen 2</text>
+</svg>
