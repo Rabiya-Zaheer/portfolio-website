@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
+import { Providers } from "./providers";
 import { ThemeProvider } from "@/components/layout/theme-provider";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
@@ -59,16 +60,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <ThemeProvider>
-          <ToastProvider>
-            <ScrollProgress />
-            <Navbar />
-            <main className="flex-1 pt-16">{children}</main>
-            <Footer />
-            <BackToTop />
-          </ToastProvider>
-        </ThemeProvider>
-      </body>
+  <Providers>
+    <ThemeProvider>
+      <ToastProvider>
+        <ScrollProgress />
+        <Navbar />
+        <main className="flex-1 pt-16">{children}</main>
+        <Footer />
+        <BackToTop />
+      </ToastProvider>
+    </ThemeProvider>
+  </Providers>
+</body>
     </html>
   );
 }
