@@ -1,9 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-
-// Phase 2 TODO: connect this route to an email service (Resend, Nodemailer, etc.)
-// or persist submissions to a database. The contact form already POSTs here
-// with { name, email, subject, message }, so no frontend changes are required
-// once real backend logic is added.
+import { prisma } from "@/lib/prisma";
 
 export async function POST(request: NextRequest) {
   try {
@@ -17,19 +13,23 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Placeholder response until backend integration ships.
+    const contact = await prisma.contact.create({
+      data: { name, email, subject, message },
+    });
+
     return NextResponse.json(
       {
         success: true,
-        message: "Backend integration coming soon.",
-        received: { name, email, subject, message },
+        message: "Message saved successfully.",
+        contact,
       },
       { status: 200 }
     );
-  } catch {
+  } catch (error) {
+    console.error("Contact form error:", error);
     return NextResponse.json(
-      { success: false, error: "Invalid request payload." },
-      { status: 400 }
+      { success: false, error: "Something went wrong. Please try again." },
+      { status: 500 }
     );
   }
 }

@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/portfolio/iris-dataset-eda":{},"/portfolio/aapl-stock-price-prediction":{},"/portfolio/heart-disease-prediction":{},"/portfolio/bert-news-classifier":{},"/portfolio/customer-churn-pipeline":{},"/portfolio/multimodal-housing-price-prediction":{}},"dynamicRoutes":{"/portfolio/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/portfolio/[slug]","routeRegex":"^\\/portfolio\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"7c3570cf97b826757d2593acd2330c9f","previewModeSigningKey":"f22826ba39d4d9d82bbd82918b42fdcb2acca122316eecbdfbb9f09a306b7aed","previewModeEncryptionKey":"f73e9c49788ffec59162a0f489be76f15d8bb6d639c24863cbc2babf880d750e"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "057a07c415b0899c9abaa47848eb30ad",
+    "previewModeSigningKey": "7894e1f0b2d625508ec17d5107bf7ddf7b62d035e447adc174359b265aa68c94",
+    "previewModeEncryptionKey": "1c7a0a240fa79b369199f60623e7385d437a4852c54355fa2b28011422b070d8"
+  }
+}
