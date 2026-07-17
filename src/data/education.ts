@@ -6,16 +6,34 @@ export const education: EducationItem[] = [
     institution: "Government College University, Lahore",
     degree: "Bachelor of Science",
     field: "Computer Science",
-    duration: "2022 — 2026",
-    cgpa: "3.7 / 4.0",
+    duration: "2023 — 2027",
+    cgpa: "2.96 / 4.0",
     location: "Lahore, Pakistan",
     coursework: [
-      "Machine Learning",
-      "Natural Language Processing",
-      "Web Engineering",
-      "Compiler Construction",
-      "Computer Architecture",
-      "Human Computer Interaction",
+      {
+        semester: "Semester 1",
+        courses: ["Applications of ICT","Discrete Structures", "Applied Physics"],
+      },
+      {
+        semester: "Semester 2",
+        courses: ["Programming Fundamentals","Digital Logic Design"],
+      },
+      {
+        semester: "Semester 3",
+        courses: ["Object Oriented Programming","Software Engineering"],
+      },
+      {
+        semester: "Semester 4",
+        courses: ["Artificial Intelligence","Database Systems", "Data Structures and Algorithms", "Operating Systems"],
+      },
+      {
+        semester: "Semester 5",
+        courses: [ "Machine Learning", "Advanced Database Systems", "Design and Analysis of Algorithms","Computer Organization and Assembly Language"],
+      },
+      {
+        semester: "Semester 6",
+        courses: ["Web Engineering", "Natural Language Processing", "Compiler Construction","Computer Architecture", "Human Computer Interaction"],
+      },
     ],
   },
 ];
@@ -23,7 +41,7 @@ export const education: EducationItem[] = [
 export const journeyTimeline: TimelineEvent[] = [
   {
     id: "started-cs",
-    year: "2022",
+    year: "2023",
     title: "Started Computer Science",
     description:
       "Began a Bachelor's degree in Computer Science at Government College University, Lahore.",
@@ -38,21 +56,21 @@ export const journeyTimeline: TimelineEvent[] = [
   },
   {
     id: "ml-projects",
-    year: "2023",
+    year: "2024",
     title: "Built ML Projects",
     description: "Built first machine learning projects covering classification, regression, and NLP basics.",
     icon: "BrainCircuit",
   },
   {
     id: "ai-internship",
-    year: "2025",
+    year: "2026",
     title: "AI Internship",
     description: "Joined DevelopersHub Corporation as an AI/ML Engineer Intern, working on real datasets and models.",
     icon: "Sparkles",
   },
   {
     id: "mern-internship",
-    year: "2024",
+    year: "2026",
     title: "MERN Internship",
     description: "Joined Dafi Labs as a MERN Stack Intern, shipping full-stack features in production.",
     icon: "Layers",

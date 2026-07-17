@@ -30,10 +30,17 @@ export function EducationPreview() {
               <p className="mt-1 text-sm text-accent">{item.institution}</p>
               <p className="mt-3 text-sm text-foreground-secondary">CGPA: {item.cgpa}</p>
               <div className="mt-4 flex flex-wrap gap-2">
-                {item.coursework.slice(0, 4).map((course) => (
-                  <Badge key={course}>{course}</Badge>
-                ))}
-                {item.coursework.length > 4 && <Badge>+{item.coursework.length - 4} more</Badge>}
+                {(() => {
+                  const allCourses = item.coursework.flatMap((sem) => sem.courses);
+                  return (
+                    <>
+                      {allCourses.slice(0, 4).map((course) => (
+                        <Badge key={course}>{course}</Badge>
+                      ))}
+                      {allCourses.length > 4 && <Badge>+{allCourses.length - 4} more</Badge>}
+                    </>
+                  );
+                })()}
               </div>
             </div>
           </div>

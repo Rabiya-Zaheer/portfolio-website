@@ -3,17 +3,17 @@ import type { SocialLink } from "@/types";
 export const socials: SocialLink[] = [
   {
     name: "GitHub",
-    url: "https://github.com/rabiyazaheer",
+    url: "https://github.com/Rabiya-Zaheer",
     icon: "Github",
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/rabiyazaheer",
+    url: "https://www.linkedin.com/in/rabiya-zaheer/",
     icon: "Linkedin",
   },
   {
     name: "Email",
-    url: "mailto:rabiya.zaheer@example.com",
+    url: "rabbiyazaheer8@gmail.com",
     icon: "Mail",
   },
 ];

@@ -1,11 +1,3 @@
-export type ProjectCategory =
-  | "AI"
-  | "Machine Learning"
-  | "Python"
-  | "Web"
-  | "React"
-  | "MERN";
-
 export interface Project {
   slug: string;
   title: string;
@@ -17,7 +9,7 @@ export interface Project {
   features: string[];
   challenges: string[];
   lessonsLearned: string[];
-  categories: ProjectCategory[];
+  categories: string[];
   thumbnail: string;
   heroImage: string;
   screenshots: string[];
@@ -52,6 +44,11 @@ export interface ExperienceItem {
   logo?: string;
 }
 
+export interface SemesterCoursework {
+  semester: string;
+  courses: string[];
+}
+
 export interface EducationItem {
   id: string;
   institution: string;
@@ -60,7 +57,7 @@ export interface EducationItem {
   duration: string;
   cgpa: string;
   location: string;
-  coursework: string[];
+  coursework: SemesterCoursework[];
 }
 
 export interface Certificate {

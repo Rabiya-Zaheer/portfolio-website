@@ -5,7 +5,7 @@ export const experiences: ExperienceItem[] = [
     id: "developershub",
     company: "DevelopersHub Corporation",
     role: "AI/ML Engineer Intern",
-    duration: "2025 — Present",
+    duration: "April 2026 — May 2026",
     location: "Remote",
     type: "Internship",
     description:
@@ -22,7 +22,7 @@ export const experiences: ExperienceItem[] = [
     id: "dafi-labs",
     company: "Dafi Labs",
     role: "MERN Stack Intern",
-    duration: "2024 — 2025",
+    duration: "July 2026 — August 2026",
     location: "Remote",
     type: "Internship",
     description:

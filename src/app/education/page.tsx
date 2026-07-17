@@ -54,11 +54,23 @@ export default function EducationPage() {
                         <BookOpen className="h-3.5 w-3.5" />
                         Relevant Coursework
                       </div>
-                      <div className="mt-3 flex flex-wrap gap-2">
-                        {item.coursework.map((course) => (
-                          <Badge key={course} variant="accent">
-                            {course}
-                          </Badge>
+                      <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                        {item.coursework.map((sem) => (
+                          <div
+                            key={sem.semester}
+                            className="rounded-xl border border-border bg-background-secondary p-4"
+                          >
+                            <p className="font-heading text-sm font-semibold text-accent">
+                              {sem.semester}
+                            </p>
+                            <div className="mt-3 flex flex-wrap gap-2">
+                              {sem.courses.map((course) => (
+                                <Badge key={course} variant="accent">
+                                  {course}
+                                </Badge>
+                              ))}
+                            </div>
+                          </div>
                         ))}
                       </div>
                     </div>

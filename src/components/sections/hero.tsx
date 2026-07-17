@@ -34,21 +34,27 @@ export function Hero() {
             transition={{ duration: 0.55, delay: 0.05 }}
             className="font-heading text-4xl font-semibold leading-[1.1] tracking-tight text-balance sm:text-5xl lg:text-6xl"
           >
-            Hi, I&apos;m <span className="text-accent">{personalInfo.name}</span>
+          Hi, I&apos;m <span className="text-accent">{personalInfo.name}</span>
           </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, delay: 0.1 }}
+            className="mt-3 font-heading text-2xl font-medium text-foreground-secondary sm:text-3xl"
+          >
+            {personalInfo.title}
+          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.12 }}
-            className="mt-4 font-heading text-2xl font-medium text-foreground-secondary sm:text-3xl"
+            transition={{ duration: 0.55, delay: 0.16 }}
+            className="mt-3 font-heading text-2xl font-medium sm:text-3xl"
           >
-            {personalInfo.title}
+            <RotatingText words={personalInfo.roles} className="text-accent" />
             <br />
-            <span className="text-foreground">
-              I build&nbsp;
-              <RotatingText words={personalInfo.roles} className="text-accent" />
-            </span>
+            <span className="text-foreground">I build</span>
           </motion.div>
 
           <motion.p
