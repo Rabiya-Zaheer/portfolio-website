@@ -2,6 +2,8 @@ import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
 import { prisma } from "@/lib/prisma";
+import { ratelimit } from "@/lib/ratelimit";
+import { headers } from "next/headers";
 
 const handler = NextAuth({
   providers: [
@@ -14,6 +16,13 @@ const handler = NextAuth({
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) {
           return null;
+        }
+
+        // Rate limit by email (prevents brute-forcing one specific account)
+        const { success } = await ratelimit.limit(`login:${credentials.email}`);
+
+        if (!success) {
+          throw new Error("RATE_LIMITED");
         }
 
         const admin = await prisma.admin.findUnique({
